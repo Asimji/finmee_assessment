@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import logoBlue from '../images/ntwist-logo.png'
 import logoWhite from '../images/ntwistlight.png'
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import './All.css'
 
 
   const customStyles = {
@@ -50,13 +51,26 @@ const CustomDropdown = () => {
         onMouseEnter={() => setIsOpen(true)}
         onMouseLeave={() => setIsOpen(false)}
         fontSize={'18px'} fontWeight={'500'} lineHeight={'28px'}
+        
+        
       >
-        <Button onClick={toggleDropdown} variant="outline" size="sm"  fontSize={'18px'} fontWeight={'500'} lineHeight={'28px'}
+          <Box  as="span" position="relative">
+          <Button onClick={toggleDropdown} variant="outline" size="sm"  fontSize={'16px'} fontWeight={'500'} lineHeight={'28px'}
         textColor={TextColor}
         border={'none'}
+        pb={'0.5vh'}
+        className='heading'
+        _hover={{
+          bgColor:'none'
+        }}
          >
-          Industries &#9660;
+          Industries <span style={{fontSize:'10px',marginLeft:'1vh'}}>&#9660;</span>
         </Button>
+              <span
+                className="selecting-ind"
+              />
+          </Box>
+      
         {isOpen && (
           <Box
             position="absolute"
@@ -69,10 +83,43 @@ const CustomDropdown = () => {
             p={'2rem'}
             textColor={scrolling ? '#1D507F' : 'black'}
           >
-            <Text>Sustainability</Text>
-            <Text mt={'3vh'}>Mineral Processing</Text>
-            <Text mt={'3vh'}>Mine-To-Mili-To-Mine <br /> Optimisation</Text>
-            <Text mt={'3vh'}>Oil & Gas</Text>
+           <Box  as="span" position="relative">
+            <Text  _hover={{
+              cursor: 'pointer',
+               }}
+              >Sustainability</Text>
+              <span
+                className="selecting"
+              />
+          </Box>
+      <Box  as="span" position="relative">
+      <Text  mt={'3vh'} _hover={{
+       cursor: 'pointer',
+      }}
+       >Mineral Processing</Text>
+      <span
+         className="selecting-min"
+      />
+      </Box>
+      <Box  as="span" position="relative">
+      <Text mt={'3vh'} _hover={{
+       cursor: 'pointer',
+      }}
+       >Mine-To-Mili-To-Mine <br /> Optimisation</Text>
+      <span
+        className="selecting"
+      />
+      </Box>
+      <Box  as="span" position="relative">
+      <Text  mt={'3vh'} _hover={{
+       cursor: 'pointer',
+      }}
+       >Oil & Gas</Text>
+      <span
+         className="selecting-oil"
+      />
+      </Box>
+          
           </Box>
         )}
       </Box>
@@ -86,18 +133,54 @@ const CustomDropdown = () => {
     
     >
     <Box w={'25vh'} >
-      <Image src={ImageColor} w={{lg:'90%',base:'60%'}} />
+      <Image src={ImageColor} w={{lg:'80%',base:'60%'}} />
     </Box>
 
     <Flex gap={'4vh'} justifyContent="space-between" 
-    fontSize={'18px'} fontWeight={'500'} lineHeight={'28px'} style={customStyles}
+    fontSize={'16px'} fontWeight={'500'} lineHeight={'28px'} style={customStyles}
     mt={'1.5vh'}  cursor={'pointer'} display={{lg:'flex',base:'none'}}
+    className='heading'
     >
-      <Text textColor={TextColor}>Home</Text>
-      <CustomDropdown/>
-      <Text textColor={TextColor}>AI Software</Text>
-      <Text textColor={TextColor}>Blogs</Text>
-      <Text textColor={TextColor}>Contact Us</Text>
+<Box  as="span" position="relative">
+      <Text textColor={TextColor} _hover={{
+       cursor: 'pointer',
+      }}
+       >Home</Text>
+      <span
+        className="underline"
+      />
+      </Box>
+         <CustomDropdown/> 
+         <Box  as="span" position="relative">
+      <Text textColor={TextColor}
+     _hover={{
+       cursor: 'pointer',
+      }}
+    
+      >AI Software</Text>
+      <span
+        className="underline"
+      />
+      </Box>
+      <Box  as="span" position="relative">
+      <Text textColor={TextColor} _hover={{
+       cursor: 'pointer',
+      }}
+       >Blogs</Text>
+      <span
+        className="underline"
+      />
+      </Box>
+      <Box  as="span" position="relative">
+      <Text textColor={TextColor} _hover={{
+       cursor: 'pointer',
+      }}
+       >Contact Us</Text>
+      <span
+        className="underline"
+      />
+      </Box>
+     
     </Flex>
     <Box display={{ base: 'block', lg: 'none' }} >
           <IconButton

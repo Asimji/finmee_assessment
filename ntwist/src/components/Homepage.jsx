@@ -26,7 +26,7 @@ const Homepage = () => {
             </Box>
             <Box  
             > 
-            <Flex justifyContent={'space-between'} position={'absolute'} top={{lg:'3%',md:'5%',base:'5vh'}} alignItems={'center'}
+            <Flex justifyContent={'space-between'} position={'absolute'} top={{lg:'3%',base:'5vh'}} alignItems={'center'}
             p={'0 8vh 0 6vh'}
             >
             <Box w={'50%'} color={'#ffff'}>

@@ -1,3 +1,80 @@
 .heading{
     font-family: 'Inter', sans-serif;
 }
+
+.underline {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px; 
+    background: #081528; 
+    top: 50%;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease-in-out; /* Add animation to width property */
+  }
+  
+  span:hover .underline {
+    width: 100%; 
+  }
+.selecting {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px; 
+    background: #081528; 
+    top: 100%;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease-in-out; /* Add animation to width property */
+  }
+  
+  span:hover .selecting {
+    width: 50%; 
+  }
+.selecting-min {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px; 
+    background: #081528; 
+    top: 100%;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease-in-out; /* Add animation to width property */
+  }
+  
+  span:hover .selecting-min {
+    width: 70%; 
+  }
+.selecting-oil {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px; 
+    background: #081528; 
+    top: 100%;
+    left: 0;
+    bottom: 0;
+    transition: width 0.3s ease-in-out; /* Add animation to width property */
+  }
+  
+  span:hover .selecting-oil {
+    width: 35%; 
+  }
+  .selecting-ind {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px; 
+    background: #081528; 
+    top: 120%;
+    left: 0;
+    bottom: 0;
+    margin-left: 1.8vh;
+    transition: width 0.3s ease-in-out; /* Add animation to width property */
+  }
+  
+  span:hover .selecting-ind {
+    width: 80%; 
+  }

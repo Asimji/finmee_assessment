@@ -4,10 +4,16 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {ChakraProvider} from '@chakra-ui/react'
+import ScrollToTopButton from './components/ScrollToTopButton';
+import Country from './components/Country';
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
+
 root.render(
   <ChakraProvider>
     <App />
+    <Country/>
+    <ScrollToTopButton  />
   </ChakraProvider>
 );
 

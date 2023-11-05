@@ -16,11 +16,11 @@ const Footer = () => {
     <Flex bg={'#081528'} direction={'column'} justifyContent={'center'} alignItems={'center'} mt={'8vh'}
     p={'5vh 0 8vh 0'}
     >
-           <Box w={'10%'}>
+           <Box w={{md:'10%',base:'15%'}}>
             <Image src={logo} alt='logo' w={'100%'}/>
            </Box>
-           <Flex textColor={'#ffff'} fontFamily={customStyles} fontSize={'16px'} fontWeight={400}
-           gap={'5vh'} m={'2vh 0 5vh 0'}
+           <Flex textColor={'#ffff'} fontFamily={customStyles} fontSize={{md:'16px',base:'13px'}} fontWeight={400}
+           gap={{md:'5vh',base:'2vh'}} m={'2vh 0 5vh 0'}
            className='heading'
            >
             <Text>Home</Text>

@@ -1,0 +1,10 @@
+.custom-dropdown {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 1rem;
+  }
+  
+  .custom-dropdown .custom-dropdown__menu {
+    top: auto; 
+    bottom: 100%; 
+  }
