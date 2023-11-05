@@ -5,6 +5,7 @@ import { Box, Button, Flex, Image, Text } from '@chakra-ui/react'
 import home from '../images/home-image.png'
 import Middle from './Middle'
 
+
 const Homepage = () => {
     const customStyles = {
         fontFamily: 'Inter',
@@ -18,23 +19,20 @@ const Homepage = () => {
         </Box>
         {/* Navbar end */}
 
+{/* Home Image Section Start */}
         <Box>
             <Box >
             <Image src={home}/>
             </Box>
             <Box  
-            >
-
-            
-            <Flex justifyContent={'space-between'} position={'absolute'} top={'10%'} alignItems={'center'}
+            > 
+            <Flex justifyContent={'space-between'} position={'absolute'} top={{lg:'3%',md:'5%',base:'5vh'}} alignItems={'center'}
             p={'0 8vh 0 6vh'}
             >
             <Box w={'50%'} color={'#ffff'}>
-                <Text fontSize={{lg:'41px',md:'30px',sm:'20px',base:'10px'}} lineHeight={{sm:'41px',base:'20px'}} fontWeight={700}>Data-Powered solutions <br /> for Industril Excellence</Text>
-                <button mt={'2vh'} fontSize={{ base: '8px', sm: '12px', md:'14px',lg: '16px',}}
-                bg={'blue'} textColor={'#ffff'} _hover={'none'}
-                style={{width:'15vw',height:'7vh',marginTop:'2vh',background:'#007AFF',fontSize:'3vh',lineHeight:'3.5185vh',color:'#ffff',fontFamily:{customStyles},fontWeight:'500px'}}
-                >Read More</button>
+                <Text fontSize={{lg:'41px',md:'20px',sm:'20px',base:'10px'}} lineHeight={{sm:'41px',base:'20px'}} fontWeight={'bold'}>Data-Powered solutions <br /> for Industril Excellence</Text>
+                <Button w={'12vw'} h={{lg:'7vh',md:'5vh'}} mt={'5vh'} bgColor={'#007AFF'} fontSize={{lg:'2.5vh',md:'1.5vh',base:'1vh'}} lineHeight={'3.5185vh'} textColor={'#ffff'} fontFamily={customStyles} fontWeight={'bold'}
+                >Read More</Button>
             </Box>
             <Box w={'60%'} mt={'5vh'}>
                 <Image src='https://ntwist.com/wp-content/uploads/2023/01/home-image-icons-v6.png' alt='connect' w={'100%'}/>
@@ -43,12 +41,17 @@ const Homepage = () => {
             </Box>
            
         </Box>
-     {/* Middle Content */}
+{/* Home Image Section End */}
+
+     {/* Middle Content Start*/}
      <Box>
                <Middle/>
      </Box>
-     {/* Middle Content */}
+     {/* Middle Content End */}
      
+     {/* Footer Start */}
+     <Footer/>
+     {/* Footer End */}
     </Box>
   )
 }

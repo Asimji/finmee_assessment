@@ -1,4 +1,4 @@
-import { Box, Button, Collapse, Flex, IconButton, Image, Text, VStack, keyframes, useDisclosure } from '@chakra-ui/react'
+import { Box, Button, Flex, IconButton, Image, Text, useDisclosure } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import logoBlue from '../images/ntwist-logo.png'
 import logoWhite from '../images/ntwistlight.png'
@@ -9,15 +9,7 @@ import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
     fontFamily: 'Inter, sans-serif',
   };
 
-const underline= keyframes`
-  0% {
-      width: 0;
-    }
-    100% {
-      width: 100%;
-    }  
-`
-const animation = `${underline} 0.3s forwards`
+
   
 
 const Navbar = () => {
